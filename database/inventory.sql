@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 19, 2015 at 08:57 PM
+-- Generation Time: Oct 19, 2015 at 09:59 PM
 -- Server version: 5.5.42-cll-lve
 -- PHP Version: 5.4.31
 
@@ -469,20 +469,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password1` varchar(300) NOT NULL,
   `password2` varchar(300) NOT NULL,
   `registration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `activation` varchar(100) NOT NULL,
   `last_login_date` date NOT NULL,
   `account_status` int(11) NOT NULL DEFAULT '0',
   `admin_status` int(1) NOT NULL DEFAULT '0',
   `forgot_password` varchar(100) NOT NULL DEFAULT '0',
   `password_reset` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password1`, `password2`, `registration_date`, `last_login_date`, `account_status`, `admin_status`, `forgot_password`, `password_reset`) VALUES
-(1, 'Engin', 'Yapici', 'engin', 'engin.yapici@example.com', 'fmzY57nCY6dSg', 'fmhrHY8C7UJz9AyO4ljSBi', '2014-11-04 16:45:16', '2015-10-19', 1, 1, 'AXVGx4snHyI1lMZQzteBEL0aphNu6vRoW5YrDcbmwkdqgPO78TJ3UK9ijS2F', 1);
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password1`, `password2`, `registration_date`, `activation`, `last_login_date`, `account_status`, `admin_status`, `forgot_password`, `password_reset`) VALUES
+(1, 'Engin', 'Yapici', 'engin', 'engin.yapici@example.com', 'JfB0YwsNhFnE2', 'JfFesdLIwPzWbnq3VtZNuM', '2014-11-04 16:45:16', '', '2015-10-19', 1, 1, 'qetx96H4wiAYJToQSsVfOLnr5aI1vuz032XklZWcPbCB7mDyNEUhFdpR8KMg', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

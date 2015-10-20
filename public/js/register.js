@@ -64,6 +64,12 @@ $(document).ready(function() {
             registerUser();
         }
     });
+    
+    $("#email").keyup(function(event) {
+        if (event.keyCode === 13) {
+            registerUser();
+        }
+    });
 
 });
 
