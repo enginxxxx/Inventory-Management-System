@@ -2,6 +2,6 @@
 
 <b>For a live demo:</b>
 
-<a href="http://ims.giderayak.net">Inventory Management System</a><br>
+<a href="http://ims.taskmeout.com">Inventory Management System</a><br>
 Email: engin.yapici@example.com<br>
 Password: password
