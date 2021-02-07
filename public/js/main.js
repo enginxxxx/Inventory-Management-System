@@ -1,6 +1,6 @@
 var SERVER_FAIL_RESPONSE = 'Something went wrong with the server, please try again.';
 
-(document).ready(function() {
+$(document).ready(function() {
     $('[placeholder]').focus(function() {
         var input = $(this);
         if (input.val() === input.attr('placeholder')) {
@@ -93,7 +93,7 @@ function showProgressCircle() {
 function hideProgressCircle() {
     var progress_circle = $(".progress-circle");
     progress_circle[0].style.opacity = 0;
-    setTimeout(progress_circle.hide(), 500);
+    setTimeout(progress_circle.hide, 500);
     progress_circle.css('z-index', '9');
 }
 
