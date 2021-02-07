@@ -483,7 +483,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password1`, `password2`, `registration_date`, `activation`, `last_login_date`, `account_status`, `admin_status`, `forgot_password`, `password_reset`) VALUES
-(1, 'Engin', 'Yapici', 'engin', 'engin.yapici@example.com', 'JfB0YwsNhFnE2', 'JfFesdLIwPzWbnq3VtZNuM', '2014-11-04 16:45:16', '', '2015-10-19', 1, 1, 'qetx96H4wiAYJToQSsVfOLnr5aI1vuz032XklZWcPbCB7mDyNEUhFdpR8KMg', 0);
+(1, 'Engin', 'Yapici', 'engin', 'test@example.com', 'JfB0YwsNhFnE2', 'JfFesdLIwPzWbnq3VtZNuM', '2014-11-04 16:45:16', '', '2015-10-19', 1, 1, 'qetx96H4wiAYJToQSsVfOLnr5aI1vuz032XklZWcPbCB7mDyNEUhFdpR8KMg', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
