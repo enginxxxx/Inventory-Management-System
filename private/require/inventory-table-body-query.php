@@ -96,9 +96,9 @@ for ($i = 0; $i < count($search_keywords_array); $i++) {
         $col_name = substr($columns[$k], -4);
         if ($col_name == "date") {
             $date_keyword = convert_str_date_to_mysql_date($keyword);
-            $stmt->bindValue($param_name, $date_keyword, PDO::PARAM_INT);
+            $stmt->bindValue($param_name, $date_keyword, PDO::PARAM_STR);
         } else {
-            $stmt->bindValue($param_name, "%$keyword%", PDO::PARAM_INT);
+            $stmt->bindValue($param_name, "%$keyword%", PDO::PARAM_STR);
         }
     }
 }
