@@ -6,10 +6,15 @@
 /* enginyapici@gmail.com                                            */
 /* ================================================================ */
 ?>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
-<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-<script type="text/javascript" src="js/external/jquery.min.js"></script>
-<script type="text/javascript" src="js/external/jquery-ui.js"></script>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css"/>
 <script src="js/main.js"></script>
 <script src="js/external/spin.min.js"></script>
 <script src="js/external/html2canvas.js"></script>
