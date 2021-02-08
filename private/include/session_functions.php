@@ -1,16 +1,11 @@
 <?php
-/* ================================================================ */
-/* Created by Engin Yapici on 11/03/2014                            */
-/* Last modified by Engin Yapici on 10/14/2015                      */
-/* ================================================================ */
-
 // Source: http://www.lynda.com/PHP-tutorials/Session-hijacking-fixation/133321/180311-4.html
 
 session_start();
 
 function end_session() {
 	session_unset();
-  session_destroy();
+  	session_destroy();
 }
 
 function request_ip_matches_session() {
@@ -36,7 +31,8 @@ function request_user_agent_matches_session() {
 }
 
 function last_login_is_recent() {
-	$max_elapsed = 60 * 10; // sec * min * hour
+	// Expires in an hour
+	$max_elapsed = 60 * 60 * 1; // sec * min * hour
 	if(!isset($_SESSION['last_login'])) {
 		return false;
 	}
@@ -75,7 +71,6 @@ function confirm_session_is_valid() {
 	}
 }
 
-
 function is_logged_in() {
 	return (isset($_SESSION['logged_in']) && $_SESSION['logged_in']);
 }
@@ -88,12 +83,10 @@ function confirm_user_logged_in() {
 	}
 }
 
-
 function after_successful_login() {
 	session_regenerate_id();
 	
 	$_SESSION['logged_in'] = true;
-
     $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
     $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 	$_SESSION['last_login'] = time();
