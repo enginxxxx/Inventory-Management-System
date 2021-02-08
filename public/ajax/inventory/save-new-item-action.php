@@ -40,7 +40,7 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
         $sql = "INSERT INTO inventory (";
         $sql .= "chemical_description, room_no, cabinet_or_asset_no, physical_state, volume_or_size, cas_no, storage_temperature, preparation_date, aliquot_date";
         $sql .= ", receipt_date, open_date, expiration_date, vendor, catalog_no, lot_no, user_id, data_enter_date, last_edit_date, last_edit_user_id, notes";
-        $sql .= ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql .= ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         $stmt = $db->prepare($sql);
 
