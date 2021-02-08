@@ -685,6 +685,19 @@ function searchAction(action) {
     } else {
         keywords = "";
     }
+    
+    // Going through each keyword, check if any one of them is a date,
+    // if it is, replacing it with the properly formatted date string;
+    // i.e., YYYY-MM-DD.
+    keywords_array = keywords.split(" ");
+    keywords_array.forEach((item, index) => {
+        const date = moment(item).format("YYYY-MM-DD");
+        const dateCast = new Date(date);
+        const isDate = dateCast instanceof Date && !isNaN(dateCast.valueOf());
+        if (isDate) keywords_array[index] = date;
+    });
+    keywords = keywords_array.join(" ");
+
     showProgressCircle();
     blockUI();
     $.ajax({
