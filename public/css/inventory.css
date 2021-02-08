@@ -98,6 +98,12 @@ input[type="search"]:focus {
     border-radius: 0px;
 }
 
+#inventory-table .data-table-editable-text-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 table td.resizing {
     cursor: col-resize !important;
 }
@@ -107,6 +113,7 @@ table td.resizing {
 }
 
 #inventory-table td {
+    position: relative;
     border: 1px solid #aaaaaa;
     white-space:nowrap;
     overflow: hidden;
@@ -128,7 +135,7 @@ table td.resizing {
 }
 
 #inventory-table thead tr:nth-child(2) {
-    //visibility: hidden;
+    /* visibility: hidden; */
     height: 20px;
     border: none;
     background: none;
