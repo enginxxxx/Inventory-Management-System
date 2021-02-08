@@ -66,7 +66,7 @@ function is_session_valid() {
 function confirm_session_is_valid() {
 	if(!is_session_valid()) {
 		end_session();
-		header("Location: index.php");
+		header("Location: /");
 		exit;
 	}
 }
@@ -78,7 +78,7 @@ function is_logged_in() {
 function confirm_user_logged_in() {
 	if(!is_logged_in()) {
 		end_session();
-		header("Location: login.php");
+		header("Location: /login");
 		exit;
 	}
 }
