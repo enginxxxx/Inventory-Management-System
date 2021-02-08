@@ -10,12 +10,12 @@ function convert_mysql_date_to_php_date($date) {
 
 function convert_str_date_to_mysql_date($date) {
     if ($date == "N/A" || $date == "0") {
-        $date = "0";
+        $date = NULL;
     } else {
         try {
             $date = date('Y-m-d', strtotime($date));
         } catch (Exception $e) {
-            $date = "0";
+            $date = NULL;
         }
     }
     return $date;
