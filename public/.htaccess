@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{DOCUMENT_ROOT}/$1 -f
+RewriteRule ^[^/]+/([^.]+\.(?:js|css|jpe?g|png|gif))$ /$1 [L,R=301,NC]
+
+RewriteRule ^$ index.php [QSA,L]
+RewriteRule ^([a-zA-Z_]+)?$ $1.php [QSA,L]
+
+#Redirecting the 404s to homepage
+ErrorDocument 404 /

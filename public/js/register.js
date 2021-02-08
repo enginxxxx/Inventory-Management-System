@@ -101,7 +101,7 @@ function registerUser() {
             dataType: "html",
             success: function(html_response) {
                 if (html_response.trim() === "success") {
-                    window.location = "/activation.php";
+                    window.location = "/activation";
                 } else {
                     error_div.html(html_response);
                 }

@@ -63,7 +63,7 @@ function logoutAction() {
         dataType: "html",
         success: function(html_response) {
             if (html_response.trim() === 'success') {
-                window.location = "/index.php";
+                window.location = "/";
             } else {
                 error_div.html('Something went wrong. Please try again.');
             }

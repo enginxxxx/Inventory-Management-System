@@ -78,12 +78,12 @@ function loginUser() {
             dataType: "html",
             success: function(html_response) {
                 if (html_response.trim() === "success") {
-                    window.location = "/inventory.php";
+                    window.location = "/inventory";
                 } else if (html_response.trim() === "invalid_info"
                         || html_response.trim() === "wrong_combination") {
                     error_div.html("Information you entered does not match with our records.");
                 } else if (html_response.trim() === "no_activation") {
-                    window.location = "/activation.php";
+                    window.location = "/activation";
                 } else {
                     error_div.html("Something went wrong with the servers. Please try again later.");
                 }

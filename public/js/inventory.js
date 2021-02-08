@@ -805,7 +805,7 @@ function popupLoginUser() {
                         || html_response.trim() === "wrong_combination") {
                     error_div.html("Information you entered does not match with our records.");
                 } else if (html_response.trim() === "no_activation") {
-                    window.location = "/activation.php";
+                    window.location = "/activation";
                 } else {
                     error_div.html("Something went wrong with the servers. Please try again later.");
                 }
