@@ -1,6 +1,6 @@
 <?php
 function convert_mysql_date_to_php_date($date) {
-    if ($date == "0000-00-00") {
+    if ($date == "0000-00-00" || $date == NULL) {
         $date = "N/A";
     } else {
         $date = date('d-M-y', strtotime($date));

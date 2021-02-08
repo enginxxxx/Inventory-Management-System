@@ -167,7 +167,7 @@ function fitScreen() {
 
 const prepDate = (dateString) => {
     const date = moment(dateString).format("YYYY-MM-DD");
-    if (date === "Invalid date") return "0";
+    if (date === "Invalid date") return null;
     return date;
 }
 
