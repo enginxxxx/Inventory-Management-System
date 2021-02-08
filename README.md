@@ -1,7 +1,8 @@
 # Inventory-Management-System
 
-<b>For a live demo:</b>
+<b>For a live demo:</b></br>
+<a href="http://ims.yapici.net/demo">Inventory Management System</a><br>
 
-<a href="http://ims.enginyapici.com">Inventory Management System</a><br>
-Email: engin.yapici@example.com<br>
+<b>If logged out:</b></br>
+Email: test@example.com<br>
 Password: password
