@@ -39,8 +39,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
         // Inserting the information to the database
         $sql = "INSERT INTO inventory (";
         $sql .= "chemical_description, room_no, cabinet_or_asset_no, physical_state, volume_or_size, cas_no, storage_temperature, preparation_date, aliquot_date";
-        $sql .= ", receipt_date, open_date, expiration_date, vendor, catalog_no, lot_no, user_id, data_enter_date, last_edit_date, notes";
-        $sql .= ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql .= ", receipt_date, open_date, expiration_date, vendor, catalog_no, lot_no, user_id, data_enter_date, last_edit_date, last_edit_user_id, notes";
+        $sql .= ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         $stmt = $db->prepare($sql);
 
@@ -62,7 +62,8 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
         $stmt->bindValue(16, $user_id, PDO::PARAM_STR);
         $stmt->bindValue(17, $current_date, PDO::PARAM_STR);
         $stmt->bindValue(18, $current_date, PDO::PARAM_STR);
-        $stmt->bindValue(19, $notes, PDO::PARAM_STR);
+        $stmt->bindValue(19, $user_id, PDO::PARAM_STR);
+        $stmt->bindValue(20, $notes, PDO::PARAM_STR);
         $result = $stmt->execute();
 
         if ($result) {

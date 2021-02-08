@@ -3,7 +3,7 @@ require_once('../private/include/session_functions.php');
 require('../private/include/include.php');
 
 if (is_logged_in()) {
-    $target = 'inventory.php';
+    $target = 'inventory';
     header("Location: /$target");
     exit;
 }
@@ -55,8 +55,8 @@ if (is_logged_in()) {
                             . "<div>Thank you for activating your account. You will be redirected to the inventory page in 10 seconds.</div>"
                             . "<br>"
                             . "<div>Please click the following link if you are not redirected</div><br>"
-                            . "<div><a href='" . DOMAIN_NAME . "/inventory.php'>Inventory</a></div>";
-                            echo "<meta http-equiv='refresh' content='8;url=/inventory.php'>";
+                            . "<div><a href='" . DOMAIN_NAME . "/inventory'>Inventory</a></div>";
+                            echo "<meta http-equiv='refresh' content='8;url=/inventory'>";
                         } else {
                             echo "<h1>Something Went Wrong</h1>"
                             . "<div>Your account could not be activated. Please contact the webmaster.</div>";

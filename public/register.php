@@ -2,7 +2,7 @@
 require_once('../private/include/session_functions.php');
 
 if (is_logged_in()) {
-    $target = 'inventory.php';
+    $target = 'inventory';
     header("Location: /$target");
     exit;
 }
