@@ -9,7 +9,7 @@ function convert_mysql_date_to_php_date($date) {
 }
 
 function convert_str_date_to_mysql_date($date) {
-    if ($date == "N/A") {
+    if ($date == "N/A" || $date == "0") {
         $date = "0";
     } else {
         try {

@@ -165,6 +165,12 @@ function fitScreen() {
 
 }
 
+const prepDate = (dateString) => {
+    const date = moment(dateString).format("YYYY-MM-DD");
+    if (date === "Invalid date") return "0";
+    return date;
+}
+
 function undoAction() {
     var error_div = $('#add-new-item-error-div');
     error_div.html('&nbsp;');
@@ -202,12 +208,14 @@ function updateInfoForUndo(inputId, oldValue, lastItemInUndoList) {
     var itemId = arr[arr.length - 1];
     var fieldName = "";
     var isDate = 0;
+    var value = encodeURIComponent(oldValue);
     for (var i = 1; i < arr.length - 1; i++) {
         fieldName += arr[i] + '_';
     }
     fieldName = fieldName.slice(0, -1);
     if ($('#' + inputId).hasClass('datepicker')) {
         isDate = 1;
+        value = prepDate(value);
     }
 
     var error_div = $('#add-new-item-error-div');
@@ -219,7 +227,7 @@ function updateInfoForUndo(inputId, oldValue, lastItemInUndoList) {
         type: "POST",
         data: "item_id=" + itemId +
                 "&field_name=" + fieldName +
-                "&value=" + encodeURIComponent(oldValue) +
+                "&value=" + value +
                 "&is_date=" + isDate +
                 "&is_undo=true",
         cache: false,
@@ -433,12 +441,14 @@ function updateInfo() {
     var itemId = arr[arr.length - 1];
     var fieldName = "";
     var isDate = 0;
+    var value = encodeURIComponent($('#' + inputId).val());
     for (var i = 1; i < arr.length - 1; i++) {
         fieldName += arr[i] + '_';
     }
     fieldName = fieldName.slice(0, -1);
     if ($('#' + inputId).hasClass('datepicker')) {
         isDate = 1;
+        value = prepDate(value);
     }
 
     var error_div = $('#add-new-item-error-div');
@@ -450,7 +460,7 @@ function updateInfo() {
         type: "POST",
         data: "item_id=" + itemId +
                 "&field_name=" + fieldName +
-                "&value=" + encodeURIComponent($('#' + inputId).val()) +
+                "&value=" + value +
                 "&is_date=" + isDate +
                 "&is_undo=false",
         cache: false,
@@ -484,7 +494,6 @@ function deleteItem() {
         itemIds += selectedRowIds[i] + ",";
     }
     itemIds = itemIds.slice(0, -1);
-
 
     var error_div = $('#add-new-item-error-div');
     error_div.html('&nbsp;');
@@ -581,11 +590,11 @@ function saveNewItem() {
     var volume_or_size = encodeURIComponent($("#add-new-item-volume-or-size-input").val());
     var cas_no = encodeURIComponent($("#add-new-item-cas-no-input").val());
     var storage_temperature = encodeURIComponent($("#add-new-item-storage-temperature-input").val());
-    var preparation_date = $("#add-new-item-preparation-date-input").val();
-    var aliquot_date = $("#add-new-item-aliquot-date-input").val();
-    var receipt_date = $("#add-new-item-receipt-date-input").val();
-    var open_date = $("#add-new-item-open-date-input").val();
-    var expiration_date = $("#add-new-item-expiration-date-input").val();
+    var preparation_date = prepDate($("#add-new-item-preparation-date-input").val());
+    var aliquot_date = prepDate($("#add-new-item-aliquot-date-input").val());
+    var receipt_date = prepDate($("#add-new-item-receipt-date-input").val());
+    var open_date = prepDate($("#add-new-item-open-date-input").val());
+    var expiration_date = prepDate($("#add-new-item-expiration-date-input").val());
     var vendor = encodeURIComponent($("#add-new-item-vendor-input").val());
     var catalog_no = encodeURIComponent($("#add-new-item-catalog-no-input").val());
     var lot_no = encodeURIComponent($("#add-new-item-lot-no-input").val());
