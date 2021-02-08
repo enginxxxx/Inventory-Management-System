@@ -1,12 +1,4 @@
 <?php
-
-/* ================================================================ */
-/* Created by Engin Yapici on 01/04/2015                            */
-/* Last modified by Engin Yapici on 10/16/2015                      */
-/* Copyright Engin Yapici, 2015.                                    */
-/* enginyapici@gmail.com                                            */
-/* ================================================================ */
-
 $selected_cabinet = $_SESSION['selected_cabinet'];
 $html_content = "";
 $is_any_cabinet_selected = 0;

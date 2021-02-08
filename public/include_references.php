@@ -1,11 +1,3 @@
-<?php
-/* ================================================================ */
-/* Created by Engin Yapici on 11/03/2014                            */
-/* Last modified by Engin Yapici on 10/16/2015                      */
-/* Copyright Engin Yapici, 2015.                                    */
-/* enginyapici@gmail.com                                            */
-/* ================================================================ */
-?>
 <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="

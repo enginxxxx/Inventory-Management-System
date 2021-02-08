@@ -1,14 +1,4 @@
 <?php
-
-/* ================================================================ */
-/* Created by Engin Yapici on 12/07/2014                            */
-/* Last modified by Engin Yapici on 10/16/2015                      */
-/* Copyright Engin Yapici, 2015.                                    */
-/* enginyapici@gmail.com                                            */
-/* ================================================================ */
-
-
-
 $pagination_page_number = 1;
 $pagination_start_point = 0;
 $number_of_items_per_page = 25;

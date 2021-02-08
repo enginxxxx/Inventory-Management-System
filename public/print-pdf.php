@@ -1,11 +1,4 @@
 <?php
-/* ================================================================ */
-/* Created by Engin Yapici on 12/19/2014                            */
-/* Last modified by Engin Yapici on 10/16/2015                      */
-/* Copyright Engin Yapici, 2015.                                    */
-/* enginyapici@gmail.com                                            */
-/* ================================================================ */
-
 require_once("../private/include/external/mpdf/mpdf.php");
 require_once('../private/include/include.php');
 $selected_cabinet_db;

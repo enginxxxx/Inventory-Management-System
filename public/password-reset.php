@@ -1,10 +1,4 @@
 <?php
-/* ================================================================ */
-/* Created by Engin Yapici on 09/11/2015                            */
-/* Last modified by Engin Yapici on 10/19/2015                      */
-/* Copyright Engin Yapici, 2015.                                    */
-/* enginyapici@gmail.com                                            */
-/* ================================================================ */
 require_once('../private/include/session_functions.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"

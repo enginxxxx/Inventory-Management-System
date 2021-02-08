@@ -1,12 +1,4 @@
 <?php
-
-/* ================================================================ */
-/* Created by Engin Yapici on 02/11/2015                            */
-/* Last modified by Engin Yapici on 10/16/2015                      */
-/* Copyright Engin Yapici, 2015.                                    */
-/* enginyapici@gmail.com                                            */
-/* ================================================================ */
-
 $row_number = $pagination_start_point + 1;
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $idItem = $row['id'];

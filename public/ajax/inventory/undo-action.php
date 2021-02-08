@@ -1,12 +1,4 @@
 <?php
-
-/* ================================================================ */
-/* Created by Engin Yapici on 01/23/2015                            */
-/* Last modified by Engin Yapici on 10/14/2015                      */
-/* Copyright Engin Yapici, 2015.                                    */
-/* enginyapici@gmail.com                                            */
-/* ================================================================ */
-
 // Below if statement prevents direct access to the file. It can only be accessed through "AJAX".
 if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
     require('../../../private/include/include.php');
